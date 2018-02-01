@@ -1,4 +1,4 @@
-package com.beans.application;
+package com.core.main;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
