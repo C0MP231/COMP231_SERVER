@@ -1,10 +1,8 @@
 package com.data.repository;
 
-import org.springframework.data.repository.Repository;
-
 import java.io.Serializable;
 
-public interface IRepository<T, ID extends Serializable> extends Repository<T, ID> {
+public interface IRepository<T, ID extends Serializable> {
 
     <S extends T> S save(S entity);
 

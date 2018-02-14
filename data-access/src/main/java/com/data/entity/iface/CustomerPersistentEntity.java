@@ -10,7 +10,10 @@ public interface CustomerPersistentEntity {
     String getAddress();
     String getCity();
 
-    Long setId();
+
+
+    void setId(Long id);
+
     void setFirstName(String firstName);
     void setLastName(String lastName);
     void setPhone(String phone);

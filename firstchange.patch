@@ -1,0 +1,38 @@
+Index: data-access/src/main/java/com/data/entity/iface/CustomerPersistentEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- data-access/src/main/java/com/data/entity/iface/CustomerPersistentEntity.java	(revision 3f15946931ae9dfe5226e8f9aac9657a5e0f261d)
++++ data-access/src/main/java/com/data/entity/iface/CustomerPersistentEntity.java	(date 1517801333000)
+@@ -10,7 +10,10 @@
+     String getAddress();
+     String getCity();
+ 
+-    Long setId();
++
++
++    void setId(Long id);
++
+     void setFirstName(String firstName);
+     void setLastName(String lastName);
+     void setPhone(String phone);
+Index: data-access/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- data-access/pom.xml	(revision 3f15946931ae9dfe5226e8f9aac9657a5e0f261d)
++++ data-access/pom.xml	(date 1517809633000)
+@@ -46,6 +46,11 @@
+             <artifactId>spring-boot-starter-test</artifactId>
+             <scope>test</scope>
+         </dependency>
++        <dependency>
++            <groupId>org.springframework</groupId>
++            <artifactId>spring-web</artifactId>
++            <version>5.0.3.RELEASE</version>
++        </dependency>
+ 
+     </dependencies>
+ 
