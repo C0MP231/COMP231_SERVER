@@ -1,5 +1,7 @@
 package com.data.entity.iface;
 
+import com.data.entity.impl.Customer;
+
 import java.sql.Date;
 
 public interface OrderPersistentEntity extends PersistentEntity{
@@ -17,8 +19,8 @@ public interface OrderPersistentEntity extends PersistentEntity{
     double getExtras();
     double getTotalCost();
 
-    void setId();
-    void setCustomer(CustomerPersistentEntity customer);
+    void setId(Long id);
+    void setCustomer(Customer customer);
     void setOrderDate(Date orderDate);
     void setMoveDate(Date moveDate);
     void setCityOut(String cityOut);

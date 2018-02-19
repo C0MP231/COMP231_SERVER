@@ -3,11 +3,10 @@ package com.data.entity.impl;
 
 import com.data.entity.abstr.CustomerPersistentEntityAbstraction;
 
-import javax.persistence.Table;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -29,6 +28,10 @@ public class Customer extends CustomerPersistentEntityAbstraction {
     private String address;
     @NotNull
     private String city;
+
+    @OneToMany
+    @JoinColumn(name = "CUSTOMER_ID")
+    private List<Order> orders = new ArrayList<>();
 
     public Customer(String firstName, String lastName) {
         super(firstName, lastName);
