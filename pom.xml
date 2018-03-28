@@ -15,9 +15,7 @@
     <version>0.1.0</version>
 
     <modules>
-        <module>core</module>
-        <module>data-access</module>
-        <module>mvc</module>
+        <module>server</module>
     </modules>
 
     <dependencies>
