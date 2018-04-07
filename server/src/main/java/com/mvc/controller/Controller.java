@@ -44,7 +44,7 @@ public class Controller {
         return new ResponseEntity<>(entity, HttpStatus.OK);
     }
 
-    @PostMapping(path = "/customer")
+    @RequestMapping(value = "/customer", method = RequestMethod.POST, consumes = "application/json")
     public ResponseEntity<Object> createUpdateCustomer(@RequestBody CustomerCreateRequest request) {
         JSONObject entity = new JSONObject();
         Customer customer;
